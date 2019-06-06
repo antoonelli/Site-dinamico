@@ -1,0 +1,383 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;/**responsivo**/
+	font-family: "Open Sans";/**font open sans**/
+}
+
+/**boot CSS**/
+
+.center{
+	max-width: 1280px;
+	padding: 0 2%;
+	margin-left: 60px;
+}
+
+.w33{
+	width: 33.3%;
+	padding: 0 10px;
+}
+
+.w50{
+	width: 50%;
+	padding:0 2%;
+}
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}
+
+.clear{
+	clear: both;
+}
+
+/**Estilização do site**/
+.sucesso, .erro-email{
+	display: none;
+	position: fixed;
+	right: 20px;
+	top: 55px;
+	padding: 10px 2%;
+	color: #008000;
+	background: #DFF2BF;
+	z-index: 9999;
+
+}
+
+.overlay-loading{
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	background: rgba(0,0,0,0.5);
+}
+.overlay-loading img {
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+
+
+header{
+	padding: 10px 0;/**espaçamento de cima e em baixo de (10px) do header**/
+	background: #313462; /**Cor do header**/
+	/*position: fixed;/**nav fixa**/
+	width: 100%;/**largura 100%**/
+}
+header .logo{
+	color: white;/**cor da fonte**/
+	font-size: 23px;/**tamanho da fonte**/
+}
+
+.mobile{
+	display: none;/**Só vai aparecer para telas pequenas**/
+}
+
+nav.desktop ul{
+	position: relative;
+	top: 4px;/**margin top de 4 px**/
+	list-style-type: none;/**regira as bolinha da da lista do ul**/
+}
+
+nav.desktop li{
+	font-size: 15px;/**tamanho da font**/
+	padding: 0 30px;/**espaçamento interno do (home,sobre,serviços,contato) **/
+	text-transform: uppercase;/**Ficar tudo em maiúsculo**/
+	display: inline-block;/**lista (home,sobre,serviços,contato) ficar um do lado da outra**/
+}
+
+nav.desktop a{
+	color:white;/**Cor da fonte**/
+	text-decoration: none;/**Deixar fonte original**/
+}
+
+.banner-principal{
+	width: 100%;/**lagura de 100%**/
+	height: 600px;/**altura de 600px**/
+	position: relative;
+}
+.banner-slider{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background-size: cover;
+	background-position: center;
+}
+section.banner-principal h1::after{
+	content: '|';
+	margin-left: 5px;
+	opacity: 1;
+	animation: pisca .7s infinite;	
+}
+@keyframes pisca {
+	0%, 100%{
+		opacity: 1;
+	}
+	50%{
+		opacity: 0;
+	}
+}
+
+section.banner-principal form{
+	width: 93%;
+	max-width: 600px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%);
+	z-index: 2;
+}
+
+section.banner-principal h1{
+	color: white;
+	font-size: 40px;
+	font-weight: 300;
+	text-align: center;
+}
+section.banner-principal form input[type=email]{
+	width: 100%;
+	height: 66px;
+	background: white;
+	color: #333;
+	font-size: 22px;
+	padding-left: 10px;
+	margin-top: 10px;
+	border: none;
+	z-index: 2;
+}
+section.banner-principal form input[type=submit]{
+	width: 100%;
+	height: 66px;
+	color: white;
+	background: #00C59E;
+	font-size: 22px;
+	padding-left: 10px;
+	margin-top: 10px;
+	cursor: pointer;
+	border: none;
+	z-index: 2;
+}
+
+section.descricao-autor{
+	padding: 30px 0;
+}
+
+section.descricao-autor h2{
+	font-size: 30px;
+	font-weight: 400;
+	color: #444;
+}
+
+section.descricao-autor p{
+	font-size: 16px;
+	color: #444;
+	margin-top: 10px;
+}
+section.especialidades{
+	padding: 40px 0;
+	background: #E2E2E2;
+	text-align: center;
+}
+section.especialidades h2.title{
+	font-size: 30px;
+	font-weight: 400;
+	color: #999;
+}
+.box-especialidade{
+	margin: 40px 0;
+}
+.box-especialidade h3{
+	color: #404580;
+	font-size: 40px;
+}
+
+.box-especialidade h4{
+	font-weight: 300;
+	color: #BABABA;
+	font-size: 25px;
+}
+.box-especialidade p{
+	color: #444;
+	font-size: 15px;
+	margin-top: 10px;
+}
+
+section.extras{
+	background: #404580;
+	padding: 30px 0;
+}
+.depoimentos-container, .servicos-container{
+	padding: 0 50px;
+}
+section.extras .title{
+	color: white;
+	font-weight: 300;
+	font-size: 25px;
+	margin-bottom: 15px;
+	text-align: center;
+}
+.depoimentos-single{
+	padding: 15px 0;
+	border-bottom: 1px solid #5056A0;
+}
+
+p.depoimentos-descricao{
+	color: white;
+}
+p.depoimento-single{
+	font-size: 15px;
+	color: white;
+	font-weight: 300;
+}
+
+p.nome-autor{
+	font-size: 15px;
+	color: white;
+	font-weight: bold;
+	margin-top: 5px;
+}
+
+.servicos-01 ul{
+	margin:20px 0;
+
+}
+.servicos-01 li{
+	margin-bottom: 15px;
+	font-size: 15px;
+	color: white;
+	font-weight: 300;
+}
+
+footer {
+	background: #313462;
+	width:100%;
+	padding: 20px 0;
+}
+footer.fixed{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+footer p{
+	text-align: center;
+	font-size: 25px;
+	color: white;
+}
+
+.erro_404 img{
+	width: 300px;
+	width: 98%;
+}
+
+#map{
+	width: 100%
+
+}
+
+section.maps{
+	background: rgba(241,239,233);
+}
+.contato-container{
+	padding: 50px 0;
+	text-align: center;
+
+}
+
+.contato-container input[type=text]{
+	margin: 10px 0;
+	width: 50%;
+	height: 40px;
+	border:1px solid #ccc;
+	padding-left: 8px;
+	font-size: 16px;
+	color: #444;
+
+}
+
+.contato-container textarea{
+	margin: 10px 0;
+	width: 50%;
+	height: 100px;
+	border:1px solid #ccc;
+	padding: 10px;
+	padding-left: 8px;
+	font-size: 16px;
+	color: #444;
+	padding: 10px;
+	resize: none;
+}
+
+.contato-container input[type=submit]{
+	background: #00C59E;
+	width: 140px;
+	height: 40px;
+	color: white;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+	img{
+		display: block;
+		margin:0 auto;
+		max-width: 500px;
+	}
+	.box-especialidade{
+		margin: 0;
+	}
+	.w50{
+		width: 100%;
+		padding: 20px;
+	}
+	.w33{
+		width: 100%;
+		padding: 20px;
+	}
+}
+
+@media screen and (max-width: 790px){
+	nav.desktop{
+		display: none;
+	}
+	nav.mobile{
+		display: block;
+	}
+
+	.botao-menu-mobile{
+		font-size: 24px;
+		cursor: pointer;
+		color: white;
+	}
+
+	nav.mobile ul{
+		z-index: 3;
+		position: absolute;
+		display: block;
+		left: 0;
+		top: 52px;
+		text-align: center;
+		width: 100%;
+	}
+	nav.mobile li{
+		font-size: 17px;
+		display: block;
+		background: white;
+		border-bottom: 1px solid #ccc;
+		padding: 5px 0	
+	}
+	nav.mobile li a{
+		display: block;
+		color: #444;
+		text-decoration: none;
+	}
+}
